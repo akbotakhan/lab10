@@ -27,22 +27,23 @@ function main (lab1, lab2, lab3, lab4_5, lab6, lab8) {
   sum8 = getSum(lab8);
 
   total = quiz + (sum1+sum2+sum3+sum4_5+sum6+sum8) * 60/280;
-  return total;
+  
+  const results = {
+    lab1: sum1, // array of scores for lab1
+    lab2: sum2, // array of scores for lab2
+    lab3: sum3, // array of scores for lab3
+    lab4_5: sum4_5, // array of scores for lab4 and 5
+    lab6: sum6, // array of scores for lab6
+    lab8: sum8 , // score of quiz1
+    quiz: quiz, // array of sums of each lab
+    scores_of_labs: [lab1, lab2, lab3, lab4_5, lab6, lab8],
+    total_of_labs: sum1+sum2+sum3+sum4_5+sum6+sum8,
+    total: total,
+    };
+  return results;
 }
 
 let x = main(lab1, lab2, lab3, lab4_5, lab6, lab8);
 
-const results = {
-  lab1: sum1, // array of scores for lab1
-  lab2: sum2, // array of scores for lab2
-  lab3: sum3, // array of scores for lab3
-  lab4_5: sum4_5, // array of scores for lab4 and 5
-  lab6: sum6, // array of scores for lab6
-  lab8: sum8 , // score of quiz1
-  quiz: quiz, // array of sums of each lab
-  scores_of_labs: [lab1, lab2, lab3, lab4_5, lab6, lab8],
-  total_of_labs: sum1+sum2+sum3+sum4_5+sum6+sum8,
-  total: total,
-  };
 
-  console.log(results);
+  console.log(x);
